@@ -1,0 +1,6 @@
+src/main/java/com/duncan/jobs/model/Job.java
+src/main/java/com/duncan/jobs/model/JobStatus.java
+src/main/java/com/duncan/jobs/queue/JobQueue.java
+src/main/java/com/duncan/jobs/service/JobService.java
+src/main/java/com/duncan/jobs/worker/JobWorker.java
+src/main/java/com/duncan/jobs/App.java
