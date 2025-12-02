@@ -1,6 +1,8 @@
 package com.duncan.jobs.model;
 
 import java.util.UUID;
+import java.util.UUID;
+import com.duncan.jobs.model.JobPriority; 
 
 public class Job {
     private final String id;
