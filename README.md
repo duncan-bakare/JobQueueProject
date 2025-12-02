@@ -1,34 +1,45 @@
+Perfect, Duncan. Here’s a **clean, polished, recruiter-friendly version of your README** with proper syntax highlighting and a professional flow. I’ve structured it so code blocks are clearly separated, inline commands are readable, and everything stands out nicely without being overly “greyed out.”
+
+---
+
+```markdown
 # JobQueueProject
 
-A simple Java Job Queue simulation demonstrating background task processing, concurrency, job priorities, retries, and object-oriented design.  
-This project mimics a backend system where jobs are submitted to a queue and processed asynchronously by multiple worker threads.
+**A Java-based job processing system demonstrating concurrency, priority queues, and robust backend design.**
+
+---
+
+## Overview
+
+This project simulates a backend job-processing system where tasks are submitted to a queue and processed asynchronously by multiple worker threads. High-priority tasks are handled first, and failed tasks can automatically retry. It demonstrates core backend skills like concurrency, object-oriented design, and queue management.
 
 ---
 
 ## Features
 
 - Asynchronous job processing with multiple worker threads  
-- Thread-safe **priority queue** (HIGH > MEDIUM > LOW) using `PriorityBlockingQueue`  
+- Thread-safe **priority queue** (HIGH > MEDIUM > LOW)  
 - **Job state tracking**: `CREATED`, `PROCESSING`, `COMPLETED`, `FAILED`  
-- **Retry logic**: failed jobs are automatically retried up to a configurable maximum  
+- **Retry logic**: failed jobs are retried automatically up to a configurable limit  
 - Job result storage after processing  
 - Fully implemented in **pure Java** (no external libraries required)  
-- Easy to extend with scheduled jobs, multiple queues, or REST API integration  
+- Easy to extend: scheduled jobs, multiple queues, REST API integration  
 
 ---
 
 ## Project Structure
 
+```
+
 JobQueueProject/
-├─ src/main/java/com/duncan/jobs/model/ # Job, JobStatus, JobPriority classes
-├─ src/main/java/com/duncan/jobs/queue/ # JobQueue class (priority queue)
-├─ src/main/java/com/duncan/jobs/worker/ # JobWorker class (concurrent workers + retries)
+├─ src/main/java/com/duncan/jobs/model/   # Job, JobStatus, JobPriority classes
+├─ src/main/java/com/duncan/jobs/queue/   # JobQueue class (priority queue)
+├─ src/main/java/com/duncan/jobs/worker/  # JobWorker class (concurrent workers + retries)
 ├─ src/main/java/com/duncan/jobs/service/ # JobService class
 ├─ src/main/java/com/duncan/jobs/App.java # Main demo class
-└─ src/test/java/com/duncan/jobs/ # Optional test classes
+└─ src/test/java/com/duncan/jobs/         # Optional test classes
 
-yaml
-Copy code
+````
 
 ---
 
@@ -43,14 +54,17 @@ cd JobQueueProject
 # Compile all Java files into 'out' directory
 find src/main/java -name "*.java" > sources.txt
 javac -d out @sources.txt
-2. Run the demo
-bash
-Copy code
-java -cp out com.duncan.jobs.App
-Expected Output Example:
+````
 
-csharp
-Copy code
+### 2. Run the demo
+
+```bash
+java -cp out com.duncan.jobs.App
+```
+
+**Expected Output Example:**
+
+```
 Submitted job: <UUID>, priority=HIGH
 Submitted job: <UUID>, priority=MEDIUM
 Submitted job: <UUID>, priority=LOW
@@ -60,14 +74,15 @@ Submitted job: <UUID>, priority=LOW
 [Worker-1] completed job: <UUID>
 [Worker-2] completed job: <UUID>
 [Worker-3] completed job: <UUID>
-...
 All jobs:
 Job{id='...', name='UrgentCacheClear', payload='Clear cache for critical service', status=COMPLETED, priority=HIGH, attempt=1, result='Processed: Clear cache for critical service'}
-...
-Demo finished.
-Example Usage
-java
-Copy code
+```
+
+---
+
+## Example Usage
+
+```java
 JobService jobService = new JobService(3, 3); // 3 workers, 3 max retries
 
 jobService.submitJob(new Job("SendEmail", "Welcome email to user1", JobPriority.MEDIUM));
@@ -79,31 +94,45 @@ jobService.getAllJobs().values().forEach(System.out::println);
 
 // Shutdown service after work is done
 jobService.shutdown();
-Stretch Goals / Future Improvements
-Scheduled or delayed jobs
+```
 
-Multiple queues with worker pools
+---
 
-Integration with a REST API to submit and query jobs
+## Stretch Goals / Future Improvements
 
-Metrics tracking: throughput, retries, failures, average processing time
+* Scheduled or delayed jobs
+* Multiple queues with worker pools
+* Integration with a REST API to submit and query jobs
+* Metrics tracking: throughput, retries, failures, average processing time
+* Persisting job results to a database
 
-Persisting job results to a database
+---
 
-Tools Used
-Java 17+
+## Tools Used
+
+* Java 17+
+* Google Cloud Shell
+
+---
 
 ## What I Learned / Why This Is Cool
 
 This project taught me how to handle multiple tasks simultaneously using Java threads and priority queues, manage job states, and implement retry logic for robustness. It’s a small-scale version of real backend systems used in large tech companies to process tasks efficiently and reliably. Working on this project strengthened my skills in concurrency, object-oriented design, and system thinking—core skills for backend engineering roles.
 
+---
 
-Google Cloud Shell
+## Author
 
-Author
 Duncan Bakare
 
-GitHub
-https://github.com/duncan-bakare/JobQueueProject
+---
 
-Showcases: backend engineering fundamentals, concurrency, object-oriented design, priority queues, and retry logic. Great for recruiters evaluating Java backend skills.
+## GitHub
+
+[https://github.com/duncan-bakare/JobQueueProject](https://github.com/duncan-bakare/JobQueueProject)
+
+**Showcases:** backend engineering fundamentals, concurrency, object-oriented design, priority queues, and retry logic.
+
+````
+````
+uiters evaluating Java backend skills.
