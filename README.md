@@ -100,5 +100,4 @@ jobService.getAllJobs().values().forEach(System.out::println);
 * This project is a showcase of backend engineering fundamentals for potential recruiters.
 
 ```
-Do you want me to do that next?
-```
+
