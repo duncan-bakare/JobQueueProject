@@ -1,8 +1,4 @@
-Perfect, Duncan. Here’s a **clean, polished, recruiter-friendly version of your README** with proper syntax highlighting and a professional flow. I’ve structured it so code blocks are clearly separated, inline commands are readable, and everything stands out nicely without being overly “greyed out.”
 
----
-
-```markdown
 # JobQueueProject
 
 **A Java-based job processing system demonstrating concurrency, priority queues, and robust backend design.**
