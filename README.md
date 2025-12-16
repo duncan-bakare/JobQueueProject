@@ -131,4 +131,3 @@ Duncan Bakare
 
 ````
 ````
-uiters evaluating Java backend skills.
